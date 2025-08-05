@@ -12,12 +12,14 @@ export default defineConfig({
     env: {
       DISABLE_GOOGLE_CHROME_SERVICES: true
     },
-    experimentalStudio: true},
+    experimentalStudio: true,
+    projectId: "824x52"
+
+  },
   component: {
     devServer: {
       framework: 'react',
       bundler: 'vite'
     },
-    projectId: "824x52"
   },
 });
