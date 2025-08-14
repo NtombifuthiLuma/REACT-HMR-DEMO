@@ -49,6 +49,20 @@ export default{
     open: true,
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js','.jsx'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    fallback: {
+      path: 'path-browserify',
+      fs: false,
+      os: 'os-browserify/browser.js',
+      stream: 'stream-browserify',
+      util: 'util',
+      buffer: 'buffer',
+      crypto: 'crypto-browserify',
+      assert: 'assert',
+      http: 'stream-http',
+      https: 'https-browserify',
+      url: 'url',
+      zlib: 'browserify-zlib',
+    },
   },
 };
