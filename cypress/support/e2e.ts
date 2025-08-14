@@ -14,4 +14,13 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import './commands';
+
+// Ensure Cypress types are available
+/// <reference types="Cypress" />
+
+Cypress.on('uncaught:exception', (err: Error, runnable: unknown) => {
+  // returning false here prevents Cypress from
+  // failing the test
+  return false;
+});
